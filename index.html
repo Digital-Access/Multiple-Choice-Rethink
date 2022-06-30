@@ -2,33 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <title>Show and Hide</title>
+    <title>Multiple Choice</title>
 </head>
 
 <body>
 
-    <div id="headerContainer" class=" headerContainer">
-        <img id="image" class="image" src="" alt="" srcset="">
-        <div>
-            <div class="title" id="title"></div>
-            <div class="question" id="question"></div>
+    <div id="mainContainer" class="container">
+
+        <div id="titleContainer" class="titleContainer">
+            <img id="image" class="image" src="" alt="">
+            <div id="title" class="title"></div>
+            <div class="start" id="start">Start Quiz</div>
+        </div>
+
+        <div class="contentContainer">
+            <div id="header" class="header">
+                <h1 class="question" id="question"></h1>
+                <div class="counterContainer" id="counterContainer">
+                    Score:&nbsp;<span id="score"></span>/<span id="counter"></span>
+                </div>
+            </div>
+            <div id="choicePageContainer" class="choicePageContainer">
+                <p class="endScore" id="endScore"></p>
+                <img id="endImage" class="endImage" src="" alt="">
+                <p class="endComment" id="endComment"></p>
+            </div>
+          
+            <div id="navigation" class="navigation">
+                <div class="result" id="resultCheck" style="display: none;">Check Result</div>
+                <div class="navBtn" id="next">Next  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                  </svg></div>
+                <div class="tryAgain" id="tryAgain" style="display:none;">Try Again</div>
+            </div>
         </div>
     </div>
-    <div class="selectionTitleContainer" id="selectionTitleContainer"></div>
-    <div class="selectionArea" id="selectionArea">
-
-    </div>
-
-        <div id="answerContainer" class="answerContainer">
-            <div class="largeImageContainer" id="largeImageContainer"></div>
-        </div>
- 
-
 </body>
+
+<script src="script.js"></script>
 
 </html>
